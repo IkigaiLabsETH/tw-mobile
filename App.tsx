@@ -1,9 +1,8 @@
 import React from "react";
-import { ConnectWallet, ThirdwebProvider } from "@thirdweb-dev/react-native";
-import { Button, Text, View } from "react-native";
+import { ThirdwebProvider } from "@thirdweb-dev/react-native";
 import { TW_CLIENT_ID } from "@env";
 import { myWallet } from "./secp256r1-wallet/MyConnector";
-import * as LocalAuthentication from "expo-local-authentication";
+import Home from "./app/index";
 
 const App = () => {
   return (
@@ -12,28 +11,8 @@ const App = () => {
       activeChain="mumbai"
       supportedWallets={[myWallet()]}
     >
-      <AppInner />
+      <Home />
     </ThirdwebProvider>
-  );
-};
-
-const AppInner = () => {
-  return (
-    <View className="bg-black h-full w-full">
-      <Text>React Native thirdweb starter</Text>
-      <ConnectWallet />
-      {/* Button that calls whether or not LocalAuthentication.hasHardwareAsync() */}
-      <Button
-        title="Check for biometrics"
-        onPress={async () => {
-          const hasHardware = await LocalAuthentication.hasHardwareAsync();
-          const isEnrolled = await LocalAuthentication.isEnrolledAsync();
-
-          const authTypes = await LocalAuthentication.authenticateAsync();
-          console.log(authTypes);
-        }}
-      />
-    </View>
   );
 };
 

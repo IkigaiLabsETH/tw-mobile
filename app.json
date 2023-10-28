@@ -11,7 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.reactnative.example"
@@ -32,6 +34,9 @@
           "NSFaceIDUsageDescription": "Your reason for using Face ID"
         }
       }
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
