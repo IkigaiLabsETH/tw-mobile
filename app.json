@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.reactnative.example"
@@ -27,6 +25,13 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "permissions": {
+      "ios": {
+        "infoPlist": {
+          "NSFaceIDUsageDescription": "Your reason for using Face ID"
+        }
+      }
     }
   }
 }
