@@ -1,9 +1,9 @@
-import { Text, View } from "react-native";
+import { SafeAreaView, Text } from "react-native";
 
 export default function Home() {
   return (
-    <View className="bg-black h-full w-full">
-      <Text>Hey wtf?</Text>
-    </View>
+    <SafeAreaView className="bg-white h-full mx-2">
+      <Text className="text-black">Hey wtf?</Text>
+    </SafeAreaView>
   );
 }
